@@ -954,6 +954,8 @@ Wake-UpFrame Filter Re7 : Filter3 CRC16 - Filter2 CRC16 */
 #define ETH_MACA3HR_MACA3H   ((unsigned int)0x0000FFFF)  /* MAC address3 high */
 #define ETH_MACA3LR_MACA3L   ((unsigned int)0xFFFFFFFF)  /* MAC address3 low */
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wcomment"
 /******************************************************************************/
 /*
 /*                          ETH MMC Register
@@ -1043,6 +1045,7 @@ Wake-UpFrame Filter Re7 : Filter3 CRC16 - Filter2 CRC16 */
 /*                       ETH DMA Register
 /*
 /******************************************************************************/
+#pragma GCC diagnostic pop
 #define ETH_DMABMR_AAB       ((unsigned int)0x02000000)  /* Address-Aligned beats */
 #define ETH_DMABMR_FPM        ((unsigned int)0x01000000)  /* 4xPBL mode */
 #define ETH_DMABMR_USP       ((unsigned int)0x00800000)  /* Use separate PBL */

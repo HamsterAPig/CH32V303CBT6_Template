@@ -152,6 +152,10 @@ void USART_Printf_Init(uint32_t baudrate)
  *
  * @return  size: Data length
  */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpointer-arith"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wpointer-arith"
 __attribute__((used)) int _write(int fd, char *buf, int size)
 {
     int i;
@@ -192,6 +196,6 @@ __attribute__((used)) void *_sbrk(ptrdiff_t incr)
     curbrk += incr;
     return curbrk - incr;
 }
-
+#pragma GCC diagnostic pop
 
 
